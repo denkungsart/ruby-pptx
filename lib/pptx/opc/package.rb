@@ -90,7 +90,7 @@ module PPTX
       end
 
       def to_zip
-        buffer = ::StringIO.new('')
+        buffer = ::StringIO.new
 
         Zip::OutputStream.write_buffer(buffer) do |out|
           @parts.each do |name, _|
